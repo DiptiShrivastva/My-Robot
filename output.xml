@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on darwin)" generated="2025-03-12T11:33:30.479163" rpa="false" schemaversion="5">
+<suite id="s1" name="BasicSearchFunctionality" source="/Users/prashantshrivastava/My-Robot/Tests/ebey/BasicSearchFunctionality.robot">
+<test id="s1-t1" name="Verification of search Functionality" line="11">
+<kw name="Start testCase" owner="CommonFunctinality" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-12T11:33:30.897161" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com/'.</msg>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-12T11:33:30.895850" elapsed="1.633464"/>
+</kw>
+<status status="PASS" start="2025-03-12T11:33:30.892611" elapsed="1.637724"/>
+</kw>
+<kw name="Input text and click search" owner="HeaderPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-12T11:33:32.539607" level="INFO">Typing text 'mobile' into text field 'id=gh-ac'.</msg>
+<arg>id=gh-ac</arg>
+<arg>${search_text.b}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-12T11:33:32.534041" elapsed="0.148285"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-12T11:33:32.683786" level="INFO">Clicking button '//*[@id="gh-search-btn"]'.</msg>
+<arg>${SearchButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-12T11:33:32.683000" elapsed="0.047944"/>
+</kw>
+<status status="PASS" start="2025-03-12T11:33:32.532969" elapsed="0.198358"/>
+</kw>
+<kw name="Verify search results" owner="SearchResultPage">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-03-12T11:33:34.191330" level="INFO">Current page contains text 'results for'.</msg>
+<arg>${search_results}</arg>
+<arg>${search_text.b}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-03-12T11:33:32.734459" elapsed="1.457294"/>
+</kw>
+<status status="PASS" start="2025-03-12T11:33:32.732592" elapsed="1.459688"/>
+</kw>
+<kw name="Finish testCase" owner="CommonFunctinality" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-12T11:33:34.194999" elapsed="0.076720"/>
+</kw>
+<status status="PASS" start="2025-03-12T11:33:34.193660" elapsed="0.078393"/>
+</kw>
+<doc>verifies basic search</doc>
+<status status="PASS" start="2025-03-12T11:33:30.889849" elapsed="3.382708"/>
+</test>
+<test id="s1-t2" name="Verify advance search Functionality" line="18">
+<kw name="Start testCase" owner="CommonFunctinality" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-12T11:33:34.277303" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com/'.</msg>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-12T11:33:34.276571" elapsed="1.442602"/>
+</kw>
+<status status="PASS" start="2025-03-12T11:33:34.275818" elapsed="1.444670"/>
+</kw>
+<kw name="Click on advance search" owner="LandingPage">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-03-12T11:33:35.726567" level="INFO">Clicking link '//*[@id="gh-f"]/div[2]/a'.</msg>
+<arg>//*[@id="gh-f"]/div[2]/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-12T11:33:35.725120" elapsed="0.669729"/>
+</kw>
+<status status="PASS" start="2025-03-12T11:33:35.722317" elapsed="0.673013"/>
+</kw>
+<kw name="Finish testCase" owner="CommonFunctinality" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-12T11:33:36.397070" elapsed="0.071806"/>
+</kw>
+<status status="PASS" start="2025-03-12T11:33:36.396120" elapsed="0.073100"/>
+</kw>
+<status status="PASS" start="2025-03-12T11:33:34.274343" elapsed="2.195306"/>
+</test>
+<doc>Basic search Functionality</doc>
+<status status="PASS" start="2025-03-12T11:33:30.485534" elapsed="5.986328"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="BasicSearchFunctionality" id="s1" pass="2" fail="0" skip="0">BasicSearchFunctionality</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
