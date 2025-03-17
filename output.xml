@@ -1,93 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on darwin)" generated="2025-03-12T11:33:30.479163" rpa="false" schemaversion="5">
-<suite id="s1" name="BasicSearchFunctionality" source="/Users/prashantshrivastava/My-Robot/Tests/ebey/BasicSearchFunctionality.robot">
-<test id="s1-t1" name="Verification of search Functionality" line="11">
-<kw name="Start testCase" owner="CommonFunctinality" type="SETUP">
+<robot generator="Robot 7.2 (Python 3.13.1 on darwin)" generated="2025-03-17T16:29:50.893523" rpa="false" schemaversion="5">
+<suite id="s1" name="ListAndMouseActions" source="/Users/prashantshrivastava/My-Robot/Tests/ebey/ListAndMouseActions.robot">
+<test id="s1-t1" name="Test select multiple items at one time" line="63">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-12T11:33:30.897161" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com/'.</msg>
-<arg>${url}</arg>
-<arg>${Browser}</arg>
+<msg time="2025-03-17T16:29:50.987755" level="INFO">Opening browser 'chrome' to base url 'https://www.w3schools.com/TAgs/tryit.asp?filename=tryhtml_select_multiple'.</msg>
+<arg>https://www.w3schools.com/TAgs/tryit.asp?filename=tryhtml_select_multiple</arg>
+<arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-12T11:33:30.895850" elapsed="1.633464"/>
+<status status="PASS" start="2025-03-17T16:29:50.987582" elapsed="2.230937"/>
 </kw>
-<status status="PASS" start="2025-03-12T11:33:30.892611" elapsed="1.637724"/>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:29:53.220059" level="INFO">Selecting frame 'id:iframeResult'.</msg>
+<arg>id:iframeResult</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2025-03-17T16:29:53.219488" elapsed="0.019869"/>
 </kw>
-<kw name="Input text and click search" owner="HeaderPage">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-12T11:33:32.539607" level="INFO">Typing text 'mobile' into text field 'id=gh-ac'.</msg>
-<arg>id=gh-ac</arg>
-<arg>${search_text.b}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-12T11:33:32.534041" elapsed="0.148285"/>
+<kw name="Page Should Contain List" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:29:53.246967" level="INFO">Current page contains list 'id:cars'.</msg>
+<arg>id:cars</arg>
+<doc>Verifies selection list ``locator`` is found from current page.</doc>
+<status status="PASS" start="2025-03-17T16:29:53.239841" elapsed="0.007367"/>
 </kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-12T11:33:32.683786" level="INFO">Clicking button '//*[@id="gh-search-btn"]'.</msg>
-<arg>${SearchButton}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-12T11:33:32.683000" elapsed="0.047944"/>
+<kw name="Select All From List" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:29:53.248063" level="INFO">Selecting all options from list 'id:cars'.</msg>
+<arg>id:cars</arg>
+<doc>Selects all options from multi-selection list ``locator``.</doc>
+<status status="PASS" start="2025-03-17T16:29:53.247710" elapsed="0.107435"/>
 </kw>
-<status status="PASS" start="2025-03-12T11:33:32.532969" elapsed="0.198358"/>
+<kw name="Get Selected List Labels" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:29:53.393952" level="INFO">@{AllLabels} = [ Volvo | Saab | Opel | Audi ]</msg>
+<var>@{AllLabels}</var>
+<arg>id:cars</arg>
+<doc>Returns labels of selected options from selection list ``locator``.</doc>
+<status status="PASS" start="2025-03-17T16:29:53.355404" elapsed="0.038706"/>
 </kw>
-<kw name="Verify search results" owner="SearchResultPage">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-03-12T11:33:34.191330" level="INFO">Current page contains text 'results for'.</msg>
-<arg>${search_results}</arg>
-<arg>${search_text.b}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-03-12T11:33:32.734459" elapsed="1.457294"/>
+<kw name="Unselect From List By Index" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:29:53.394584" level="INFO">Un-selecting options from selection list 'id:cars' by index 0.</msg>
+<arg>id:cars</arg>
+<arg>0</arg>
+<doc>Unselects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="PASS" start="2025-03-17T16:29:53.394359" elapsed="0.028190"/>
 </kw>
-<status status="PASS" start="2025-03-12T11:33:32.732592" elapsed="1.459688"/>
+<kw name="Unselect From List By Label" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:29:53.423042" level="INFO">Un-selecting options from selection list 'id:cars' by label Saab.</msg>
+<arg>id:cars</arg>
+<arg>Saab</arg>
+<doc>Unselects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2025-03-17T16:29:53.422855" elapsed="0.024982"/>
 </kw>
-<kw name="Finish testCase" owner="CommonFunctinality" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
+<kw name="Unselect From List By Value" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:29:53.449063" level="INFO">Un-selecting options from selection list 'id:cars' by value opel.</msg>
+<arg>id:cars</arg>
+<arg>opel</arg>
+<doc>Unselects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-03-17T16:29:53.448642" elapsed="0.025596"/>
+</kw>
+<kw name="Unselect All From List" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:29:53.474729" level="INFO">Unselecting all options from list 'id:cars'.</msg>
+<arg>id:cars</arg>
+<doc>Unselects all options from multi-selection list ``locator``.</doc>
+<status status="PASS" start="2025-03-17T16:29:53.474504" elapsed="0.036466"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-12T11:33:34.194999" elapsed="0.076720"/>
+<status status="PASS" start="2025-03-17T16:29:53.511631" elapsed="0.070703"/>
 </kw>
-<status status="PASS" start="2025-03-12T11:33:34.193660" elapsed="0.078393"/>
-</kw>
-<doc>verifies basic search</doc>
-<status status="PASS" start="2025-03-12T11:33:30.889849" elapsed="3.382708"/>
+<status status="PASS" start="2025-03-17T16:29:50.986959" elapsed="2.595554"/>
 </test>
-<test id="s1-t2" name="Verify advance search Functionality" line="18">
-<kw name="Start testCase" owner="CommonFunctinality" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-12T11:33:34.277303" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com/'.</msg>
-<arg>${url}</arg>
-<arg>${Browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-12T11:33:34.276571" elapsed="1.442602"/>
-</kw>
-<status status="PASS" start="2025-03-12T11:33:34.275818" elapsed="1.444670"/>
-</kw>
-<kw name="Click on advance search" owner="LandingPage">
-<kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2025-03-12T11:33:35.726567" level="INFO">Clicking link '//*[@id="gh-f"]/div[2]/a'.</msg>
-<arg>//*[@id="gh-f"]/div[2]/a</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-12T11:33:35.725120" elapsed="0.669729"/>
-</kw>
-<status status="PASS" start="2025-03-12T11:33:35.722317" elapsed="0.673013"/>
-</kw>
-<kw name="Finish testCase" owner="CommonFunctinality" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-12T11:33:36.397070" elapsed="0.071806"/>
-</kw>
-<status status="PASS" start="2025-03-12T11:33:36.396120" elapsed="0.073100"/>
-</kw>
-<status status="PASS" start="2025-03-12T11:33:34.274343" elapsed="2.195306"/>
-</test>
-<doc>Basic search Functionality</doc>
-<status status="PASS" start="2025-03-12T11:33:30.485534" elapsed="5.986328"/>
+<status status="PASS" start="2025-03-17T16:29:50.895143" elapsed="2.688314"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="BasicSearchFunctionality" id="s1" pass="2" fail="0" skip="0">BasicSearchFunctionality</stat>
+<stat name="ListAndMouseActions" id="s1" pass="1" fail="0" skip="0">ListAndMouseActions</stat>
 </suite>
 </statistics>
 <errors>
