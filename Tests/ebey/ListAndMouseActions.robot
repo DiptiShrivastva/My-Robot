@@ -6,7 +6,7 @@ Library  SeleniumLibrary      timeout=10s
 Test Teardown  Close Browser
 *** Test Cases ***
 TC to demonstrate mouse actions
-# https://www.sugarcrm.com/au/request-demo/   chrome
+
    [Documentation]   TC to demonstrate Alert
  
    Open Browser  https://www.sugarcrm.com/au/request-demo/   chrome
@@ -45,7 +45,7 @@ TC to demonstrate lists
 
 
 TC to demonstrate Alert
-#https://www.w3schools.com/js/tryit.asp?filename=tryjs_alert   chrome
+
     [Documentation]   TC to demonstrate Alert
     Open Browser   https://www.w3schools.com/js/tryit.asp?filename=tryjs_alert   chrome
  
@@ -70,6 +70,20 @@ Test select multiple items at one time
   Unselect From List By Label    id:cars   Saab
   Unselect From List By Value    id:cars   opel
   Unselect All From List    id:cars
+Test To demonstrate WebElement operations keywords
+   Open Browser    https://www.ebay.com/   chrome
+   Get Element Attribute    //*[@id="vl-flyout-nav"]/ul/li[3]/a    class
+  ${count} =  Get Element Count    class:vl-ellipsis-3
+   Element Should Be Enabled    class:vl-ellipsis-3
+   Element Text Should Not Be    class:vl-ellipsis-3      search favorite
+   @{a} =   Get Element Size    //*[@id="gh-ac"]
+   Get WebElement    //*[@id="vl-flyout-nav"]/ul/li[3]
+   ${count} =  Get Element Count  //*[@id="vl-flyout-nav"]/ul/li[3]
+   Capture Element Screenshot    //*[@id="vl-flyout-nav"]/ul/li[3]
+   Assign Id To Element    class:vl-ellipsis-3    search favorite
+   Page Should Contain Element    search favorite
+   Input Text    id:gh-ac    mobile
+   Cover Element    id:gh-ac
 
 
   
