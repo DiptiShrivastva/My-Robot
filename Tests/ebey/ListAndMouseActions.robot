@@ -49,11 +49,11 @@ TC to demonstrate Alert
     [Documentation]   TC to demonstrate Alert
     Open Browser   https://www.w3schools.com/js/tryit.asp?filename=tryjs_alert   chrome
  
-   Wait Until Element Is Visible     id:accept-choices     timeout=5s
+   Wait Until Element Is Visible     id:accept-choices     
    Click Element    id:accept-choices
    Select Frame    id:iframeResult
    Click Button    xpath:/html/body/button
-   ${text} =  Handle Alert   accept    timeout=7s
+   ${text} =  Handle Alert   accept    
    #Input Text Into Alert    This is my alert 
    Click Button    xpath:/html/body/button
    Alert Should Be Present   I am an alert box!    action=accept

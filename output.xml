@@ -1,82 +1,320 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on darwin)" generated="2025-03-17T16:29:50.893523" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2 (Python 3.13.1 on darwin)" generated="2025-03-17T16:46:16.596159" rpa="false" schemaversion="5">
 <suite id="s1" name="ListAndMouseActions" source="/Users/prashantshrivastava/My-Robot/Tests/ebey/ListAndMouseActions.robot">
-<test id="s1-t1" name="Test select multiple items at one time" line="63">
+<test id="s1-t1" name="TC to demonstrate mouse actions" line="8">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-17T16:29:50.987755" level="INFO">Opening browser 'chrome' to base url 'https://www.w3schools.com/TAgs/tryit.asp?filename=tryhtml_select_multiple'.</msg>
-<arg>https://www.w3schools.com/TAgs/tryit.asp?filename=tryhtml_select_multiple</arg>
+<msg time="2025-03-17T16:46:16.875879" level="INFO">Opening browser 'chrome' to base url 'https://www.sugarcrm.com/au/request-demo/'.</msg>
+<arg>https://www.sugarcrm.com/au/request-demo/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-17T16:29:50.987582" elapsed="2.230937"/>
+<status status="PASS" start="2025-03-17T16:46:16.874641" elapsed="3.535825"/>
 </kw>
-<kw name="Select Frame" owner="SeleniumLibrary">
-<msg time="2025-03-17T16:29:53.220059" level="INFO">Selecting frame 'id:iframeResult'.</msg>
-<arg>id:iframeResult</arg>
-<doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<status status="PASS" start="2025-03-17T16:29:53.219488" elapsed="0.019869"/>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>id:CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll</arg>
+<arg>Accept All Cookies</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-03-17T16:46:20.412054" elapsed="0.020670"/>
 </kw>
-<kw name="Page Should Contain List" owner="SeleniumLibrary">
-<msg time="2025-03-17T16:29:53.246967" level="INFO">Current page contains list 'id:cars'.</msg>
-<arg>id:cars</arg>
-<doc>Verifies selection list ``locator`` is found from current page.</doc>
-<status status="PASS" start="2025-03-17T16:29:53.239841" elapsed="0.007367"/>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:20.433906" level="INFO">Clicking button 'id:CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll'.</msg>
+<arg>id:CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-17T16:46:20.433302" elapsed="0.049066"/>
 </kw>
-<kw name="Select All From List" owner="SeleniumLibrary">
-<msg time="2025-03-17T16:29:53.248063" level="INFO">Selecting all options from list 'id:cars'.</msg>
-<arg>id:cars</arg>
-<doc>Selects all options from multi-selection list ``locator``.</doc>
-<status status="PASS" start="2025-03-17T16:29:53.247710" elapsed="0.107435"/>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id:input_1_6</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-03-17T16:46:20.483661" elapsed="0.336010"/>
 </kw>
-<kw name="Get Selected List Labels" owner="SeleniumLibrary">
-<msg time="2025-03-17T16:29:53.393952" level="INFO">@{AllLabels} = [ Volvo | Saab | Opel | Audi ]</msg>
-<var>@{AllLabels}</var>
-<arg>id:cars</arg>
-<doc>Returns labels of selected options from selection list ``locator``.</doc>
-<status status="PASS" start="2025-03-17T16:29:53.355404" elapsed="0.038706"/>
+<kw name="Mouse Down" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:20.820887" level="INFO">Simulating Mouse Down on element 'id:input_1_6'.</msg>
+<arg>id:input_1_6</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<status status="PASS" start="2025-03-17T16:46:20.820309" elapsed="0.366267"/>
 </kw>
-<kw name="Unselect From List By Index" owner="SeleniumLibrary">
-<msg time="2025-03-17T16:29:53.394584" level="INFO">Un-selecting options from selection list 'id:cars' by index 0.</msg>
-<arg>id:cars</arg>
-<arg>0</arg>
-<doc>Unselects options from selection list ``locator`` by ``indexes``.</doc>
-<status status="PASS" start="2025-03-17T16:29:53.394359" elapsed="0.028190"/>
+<kw name="Mouse Out" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:21.188296" level="INFO">Simulating Mouse Out on element 'id:input_1_6'.</msg>
+<arg>id:input_1_6</arg>
+<doc>Simulates moving the mouse away from the element ``locator``.</doc>
+<status status="PASS" start="2025-03-17T16:46:21.187436" elapsed="0.556978"/>
 </kw>
-<kw name="Unselect From List By Label" owner="SeleniumLibrary">
-<msg time="2025-03-17T16:29:53.423042" level="INFO">Un-selecting options from selection list 'id:cars' by label Saab.</msg>
-<arg>id:cars</arg>
-<arg>Saab</arg>
-<doc>Unselects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2025-03-17T16:29:53.422855" elapsed="0.024982"/>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@id="main"]/div/div/div[4]/div/div/div/div[2]/p[2]/a</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-03-17T16:46:21.745045" elapsed="0.281742"/>
 </kw>
-<kw name="Unselect From List By Value" owner="SeleniumLibrary">
-<msg time="2025-03-17T16:29:53.449063" level="INFO">Un-selecting options from selection list 'id:cars' by value opel.</msg>
-<arg>id:cars</arg>
-<arg>opel</arg>
-<doc>Unselects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2025-03-17T16:29:53.448642" elapsed="0.025596"/>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:22.028052" level="INFO">Simulating Mouse Over on element '//*[@id="main"]/div/div/div[4]/div/div/div/div[2]/p[2]/a'.</msg>
+<arg>//*[@id="main"]/div/div/div[4]/div/div/div/div[2]/p[2]/a</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-03-17T16:46:22.027403" elapsed="0.284877"/>
 </kw>
-<kw name="Unselect All From List" owner="SeleniumLibrary">
-<msg time="2025-03-17T16:29:53.474729" level="INFO">Unselecting all options from list 'id:cars'.</msg>
-<arg>id:cars</arg>
-<doc>Unselects all options from multi-selection list ``locator``.</doc>
-<status status="PASS" start="2025-03-17T16:29:53.474504" elapsed="0.036466"/>
+<kw name="Mouse Up" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:22.313596" level="INFO">Simulating Mouse Up on element '//*[@id="main"]/div/div/div[4]/div/div/div/div[2]/p[2]/a'.</msg>
+<arg>//*[@id="main"]/div/div/div[4]/div/div/div/div[2]/p[2]/a</arg>
+<doc>Simulates releasing the left mouse button on the element ``locator``.</doc>
+<status status="PASS" start="2025-03-17T16:46:22.312885" elapsed="0.268836"/>
+</kw>
+<kw name="Mouse Down On Link" owner="SeleniumLibrary">
+<arg>//*[@id="main"]/div/div/div[4]/div/div/div/div[2]/p[2]/a</arg>
+<doc>Simulates a mouse down event on a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-17T16:46:22.582437" elapsed="0.279906"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-17T16:29:53.511631" elapsed="0.070703"/>
+<status status="PASS" start="2025-03-17T16:46:22.863291" elapsed="0.123483"/>
 </kw>
-<status status="PASS" start="2025-03-17T16:29:50.986959" elapsed="2.595554"/>
+<doc>TC to demonstrate Alert</doc>
+<status status="PASS" start="2025-03-17T16:46:16.871644" elapsed="6.115519"/>
 </test>
-<status status="PASS" start="2025-03-17T16:29:50.895143" elapsed="2.688314"/>
+<test id="s1-t2" name="TC to demonstrate lists" line="28">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:22.989744" level="INFO">Opening browser 'chrome' to base url 'https://www.sugarcrm.com/au/request-demo/'.</msg>
+<arg>https://www.sugarcrm.com/au/request-demo/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-17T16:46:22.989309" elapsed="2.582091"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>id:CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll</arg>
+<arg>Accept All Cookies</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-03-17T16:46:25.572592" elapsed="0.020644"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:25.594880" level="INFO">Clicking button 'id:CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll'.</msg>
+<arg>id:CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-17T16:46:25.594022" elapsed="0.037899"/>
+</kw>
+<kw name="Page Should Contain List" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:25.650303" level="INFO">Current page contains list 'id:input_1_8'.</msg>
+<arg>id:input_1_8</arg>
+<doc>Verifies selection list ``locator`` is found from current page.</doc>
+<status status="PASS" start="2025-03-17T16:46:25.632483" elapsed="0.018296"/>
+</kw>
+<kw name="List Selection Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:25.652086" level="INFO">Verifying list 'id:input_1_8' has option [ Company Size* ] selected.</msg>
+<msg time="2025-03-17T16:46:25.660537" level="INFO">Current page contains list 'id:input_1_8'.</msg>
+<arg>id:input_1_8</arg>
+<arg>Company Size*</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="PASS" start="2025-03-17T16:46:25.651411" elapsed="0.313072"/>
+</kw>
+<kw name="Get List Items" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:26.166282" level="INFO">@{Items} = [ Company Size* | 1-10 employees | 11-50 employees | 51 - 100 employees | 101 - 250 employees | 251 - 500 employees | 501 - 1,000 employees | 1,001 - 2,500 employees | 2,501 - 5,000 employees | 5,001 ...</msg>
+<var>@{Items}</var>
+<arg>id:input_1_8</arg>
+<doc>Returns all labels or values of selection list ``locator``.</doc>
+<status status="PASS" start="2025-03-17T16:46:25.965178" elapsed="0.201426"/>
+</kw>
+<kw name="Get Selected List Value" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:26.189730" level="INFO">${value} = </msg>
+<var>${value}</var>
+<arg>id:input_1_8</arg>
+<doc>Returns the value of selected option from selection list ``locator``.</doc>
+<status status="PASS" start="2025-03-17T16:46:26.167208" elapsed="0.022762"/>
+</kw>
+<kw name="Get Selected List Label" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:26.213203" level="INFO">${lable} = Company Size*</msg>
+<var>${lable}</var>
+<arg>id:input_1_8</arg>
+<doc>Returns the label of selected option from selection list ``locator``.</doc>
+<status status="PASS" start="2025-03-17T16:46:26.191316" elapsed="0.022478"/>
+</kw>
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:26.215551" level="INFO">Selecting options from selection list 'id:input_1_8' by index 1.</msg>
+<arg>id:input_1_8</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="PASS" start="2025-03-17T16:46:26.214690" elapsed="0.072031"/>
+</kw>
+<kw name="Get Selected List Label" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:26.318685" level="INFO">${lable1} = 1-10 employees</msg>
+<var>${lable1}</var>
+<arg>id:input_1_8</arg>
+<doc>Returns the label of selected option from selection list ``locator``.</doc>
+<status status="PASS" start="2025-03-17T16:46:26.288074" elapsed="0.030856"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:26.320216" level="INFO">Selecting options from selection list 'id:input_1_8' by label 11-50 employees.</msg>
+<arg>id:input_1_8</arg>
+<arg>11-50 employees</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2025-03-17T16:46:26.319477" elapsed="0.037072"/>
+</kw>
+<kw name="Get Selected List Label" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:26.403843" level="INFO">${lable2} = 11-50 employees</msg>
+<var>${lable2}</var>
+<arg>id:input_1_8</arg>
+<doc>Returns the label of selected option from selection list ``locator``.</doc>
+<status status="PASS" start="2025-03-17T16:46:26.358262" elapsed="0.045834"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:26.405168" level="INFO">Selecting options from selection list 'id:input_1_8' by value level4.</msg>
+<arg>id:input_1_8</arg>
+<arg>level4</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-03-17T16:46:26.404562" elapsed="0.042392"/>
+</kw>
+<kw name="Get Selected List Label" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:26.529197" level="INFO">${lable3} = 101 - 250 employees</msg>
+<var>${lable3}</var>
+<arg>id:input_1_8</arg>
+<doc>Returns the label of selected option from selection list ``locator``.</doc>
+<status status="PASS" start="2025-03-17T16:46:26.448192" elapsed="0.081302"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-17T16:46:28.531965" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-17T16:46:26.530099" elapsed="2.002277"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-17T16:46:28.533127" elapsed="0.087693"/>
+</kw>
+<status status="PASS" start="2025-03-17T16:46:22.988359" elapsed="5.632875"/>
+</test>
+<test id="s1-t3" name="TC to demonstrate Alert" line="47">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:28.623883" level="INFO">Opening browser 'chrome' to base url 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_alert'.</msg>
+<arg>https://www.w3schools.com/js/tryit.asp?filename=tryjs_alert</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-17T16:46:28.623403" elapsed="1.279397"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:accept-choices</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-17T16:46:29.904040" elapsed="0.426582"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:30.331776" level="INFO">Clicking element 'id:accept-choices'.</msg>
+<arg>id:accept-choices</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-17T16:46:30.331174" elapsed="0.048578"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:30.381117" level="INFO">Selecting frame 'id:iframeResult'.</msg>
+<arg>id:iframeResult</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2025-03-17T16:46:30.380361" elapsed="0.037125"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:30.418652" level="INFO">Clicking button 'xpath:/html/body/button'.</msg>
+<arg>xpath:/html/body/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-17T16:46:30.418109" elapsed="0.136625"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:30.556360" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-03-17T16:46:30.563350" level="INFO">${text} = I am an alert box!</msg>
+<var>${text}</var>
+<arg>accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-03-17T16:46:30.555698" elapsed="0.008154"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:30.565370" level="INFO">Clicking button 'xpath:/html/body/button'.</msg>
+<arg>xpath:/html/body/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-17T16:46:30.564647" elapsed="0.084230"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:30.650549" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>I am an alert box!</arg>
+<arg>action=accept</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2025-03-17T16:46:30.649767" elapsed="0.006603"/>
+</kw>
+<kw name="Alert Should Not Be Present" owner="SeleniumLibrary">
+<doc>Verifies that no alert is present.</doc>
+<status status="PASS" start="2025-03-17T16:46:30.657522" elapsed="10.117695"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-17T16:46:40.776123" elapsed="0.079849"/>
+</kw>
+<doc>TC to demonstrate Alert</doc>
+<status status="PASS" start="2025-03-17T16:46:28.622290" elapsed="12.234069"/>
+</test>
+<test id="s1-t4" name="Test select multiple items at one time" line="63">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:40.858834" level="INFO">Opening browser 'chrome' to base url 'https://www.w3schools.com/TAgs/tryit.asp?filename=tryhtml_select_multiple'.</msg>
+<arg>https://www.w3schools.com/TAgs/tryit.asp?filename=tryhtml_select_multiple</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-17T16:46:40.858383" elapsed="1.312165"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:42.172138" level="INFO">Selecting frame 'id:iframeResult'.</msg>
+<arg>id:iframeResult</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2025-03-17T16:46:42.171438" elapsed="0.051376"/>
+</kw>
+<kw name="Page Should Contain List" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:42.235379" level="INFO">Current page contains list 'id:cars'.</msg>
+<arg>id:cars</arg>
+<doc>Verifies selection list ``locator`` is found from current page.</doc>
+<status status="PASS" start="2025-03-17T16:46:42.223481" elapsed="0.012248"/>
+</kw>
+<kw name="Select All From List" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:42.236730" level="INFO">Selecting all options from list 'id:cars'.</msg>
+<arg>id:cars</arg>
+<doc>Selects all options from multi-selection list ``locator``.</doc>
+<status status="PASS" start="2025-03-17T16:46:42.236194" elapsed="0.121272"/>
+</kw>
+<kw name="Get Selected List Labels" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:42.402443" level="INFO">@{AllLabels} = [ Volvo | Saab | Opel | Audi ]</msg>
+<var>@{AllLabels}</var>
+<arg>id:cars</arg>
+<doc>Returns labels of selected options from selection list ``locator``.</doc>
+<status status="PASS" start="2025-03-17T16:46:42.358247" elapsed="0.044473"/>
+</kw>
+<kw name="Unselect From List By Index" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:42.403845" level="INFO">Un-selecting options from selection list 'id:cars' by index 0.</msg>
+<arg>id:cars</arg>
+<arg>0</arg>
+<doc>Unselects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="PASS" start="2025-03-17T16:46:42.403237" elapsed="0.033040"/>
+</kw>
+<kw name="Unselect From List By Label" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:42.437531" level="INFO">Un-selecting options from selection list 'id:cars' by label Saab.</msg>
+<arg>id:cars</arg>
+<arg>Saab</arg>
+<doc>Unselects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2025-03-17T16:46:42.436875" elapsed="0.028104"/>
+</kw>
+<kw name="Unselect From List By Value" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:42.466455" level="INFO">Un-selecting options from selection list 'id:cars' by value opel.</msg>
+<arg>id:cars</arg>
+<arg>opel</arg>
+<doc>Unselects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-03-17T16:46:42.465597" elapsed="0.035410"/>
+</kw>
+<kw name="Unselect All From List" owner="SeleniumLibrary">
+<msg time="2025-03-17T16:46:42.502718" level="INFO">Unselecting all options from list 'id:cars'.</msg>
+<arg>id:cars</arg>
+<doc>Unselects all options from multi-selection list ``locator``.</doc>
+<status status="PASS" start="2025-03-17T16:46:42.502050" elapsed="0.039744"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-17T16:46:42.542703" elapsed="0.072339"/>
+</kw>
+<status status="PASS" start="2025-03-17T16:46:40.857332" elapsed="1.758130"/>
+</test>
+<status status="PASS" start="2025-03-17T16:46:16.601294" elapsed="26.015736"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="ListAndMouseActions" id="s1" pass="1" fail="0" skip="0">ListAndMouseActions</stat>
+<stat name="ListAndMouseActions" id="s1" pass="4" fail="0" skip="0">ListAndMouseActions</stat>
 </suite>
 </statistics>
 <errors>
