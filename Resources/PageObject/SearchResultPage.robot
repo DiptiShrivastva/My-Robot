@@ -3,7 +3,7 @@ Library  SeleniumLibrary
 Resource    ./HeaderPage.robot
 *** Variables ***
 ${search_results}  results for
-${search_text}  robot
+#${search_text}  robot
 
 *** Keywords ***
 Verify search results
